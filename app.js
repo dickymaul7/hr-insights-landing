@@ -6,7 +6,7 @@
  */
 
 // TEMPELKAN URL WEB APP GOOGLE APPS SCRIPT ANDA DI SINI
-const SCRIPT_URL = 'YOUR_GOOGLE_WEB_APP_URL_HERE';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyXQSmu7hlrO-vHVxDt6xFm5zzFBO0pm5krYobBHvKcpx47y2Rh1PbeigOs1XTUz9_e/exec';
 
 document.addEventListener('DOMContentLoaded', () => {
   // DOM Elements
