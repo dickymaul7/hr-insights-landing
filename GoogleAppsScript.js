@@ -1,5 +1,5 @@
 /**
- * Google Apps Script - HR Curated Insights Lead Automation
+ * Google Apps Script - Proxsis Academy Lead Automation
  * 
  * Script ini digunakan sebagai backend serverless untuk menerima data dari Landing Page,
  * mencatat data ke Google Sheets, dan secara otomatis mengirimkan email download link.
@@ -7,11 +7,11 @@
  * Panduan Setup lengkap ada di file SETUP_GUIDE.md
  */
 
-// Konfigurasi Email
+// Konfigurasi Email & Buku
 const CONFIG = {
-  EMAIL_SUBJECT: "🎁 [Akses Gratis] HR Curated Insights Anda Telah Siap!",
-  INSIGHT_LINK: "https://example.com/download/hr-curated-insights-2026.pdf", // GANTI dengan link PDF/Drive Anda
-  SENDER_NAME: "HR Insight Team"
+  EMAIL_SUBJECT: "🎁 [Akses Gratis] Ebook Risiko Human Capital dalam Transaksi M&A",
+  INSIGHT_LINK: "https://example.com/download/risiko-human-capital-ma.pdf", // GANTI dengan link PDF/Drive Anda
+  SENDER_NAME: "Proxsis Academy"
 };
 
 /**
@@ -58,7 +58,7 @@ function doPost(e) {
 
     return createResponse({
       status: "success",
-      message: "Data berhasil dicatat dan email insight telah dikirim!"
+      message: "Data berhasil dicatat dan email download link telah dikirim!"
     }, 200);
 
   } catch (error) {
@@ -87,31 +87,31 @@ function sendInsightEmail(recipientEmail, recipientName) {
   const emailHtml = `
     <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background-color: #ffffff; color: #1a202c;">
       <div style="text-align: center; margin-bottom: 24px;">
-        <span style="font-size: 28px; font-weight: bold; color: #4f46e5;">HR Insights</span>
+        <span style="font-size: 24px; font-weight: bold; color: #0d7c81;">Proxsis Academy</span>
         <hr style="border: 0; border-top: 1px solid #e2e8f0; margin-top: 16px;">
       </div>
       
       <p style="font-size: 16px; line-height: 1.6; color: #4a5568;">Halo <strong>${recipientName || 'Kolega'}</strong>,</p>
       
       <p style="font-size: 16px; line-height: 1.6; color: #4a5568;">
-        Terima kasih telah mengisi formulir minat Anda. Berikut adalah produk **HR Curated Insights** yang Anda minta. Insight ini berisi kurasi data strategis, tren rekrutmen terbaru, serta strategi retensi talenta di tahun ini.
+        Terima kasih telah mengisi formulir minat Anda. Berikut adalah Ebook **Risiko Human Capital dalam Transaksi Merger dan Akuisisi** yang Anda minta. Dokumen ini berisi analisis pasar Indonesia & Asia Pasifik serta kerangka integrasi SDM.
       </p>
       
       <div style="text-align: center; margin: 32px 0;">
-        <a href="${CONFIG.INSIGHT_LINK}" target="_blank" style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); color: #ffffff; text-decoration: none; padding: 14px 30px; font-size: 16px; font-weight: 600; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.4), 0 2px 4px -1px rgba(79, 70, 229, 0.06); display: inline-block; transition: all 0.2s;">
-          🚀 Unduh HR Curated Insights Sekarang
+        <a href="${CONFIG.INSIGHT_LINK}" target="_blank" style="background: linear-gradient(135deg, #0d7c81 0%, #154875 100%); color: #ffffff; text-decoration: none; padding: 14px 30px; font-size: 16px; font-weight: 600; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(13, 124, 129, 0.4), 0 2px 4px -1px rgba(13, 124, 129, 0.06); display: inline-block; transition: all 0.2s;">
+          🚀 Unduh Ebook M&A Sekarang
         </a>
       </div>
       
       <p style="font-size: 14px; line-height: 1.5; color: #718096; text-align: center;">
         Jika tombol di atas tidak dapat diklik, Anda dapat menyalin tautan berikut ke browser Anda:<br>
-        <a href="${CONFIG.INSIGHT_LINK}" style="color: #4f46e5; text-decoration: underline;">${CONFIG.INSIGHT_LINK}</a>
+        <a href="${CONFIG.INSIGHT_LINK}" style="color: #0d7c81; text-decoration: underline;">${CONFIG.INSIGHT_LINK}</a>
       </p>
       
       <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 32px 0 24px 0;">
       
       <p style="font-size: 14px; line-height: 1.6; color: #a0aec0; text-align: center;">
-        Tautan ini dikirimkan secara otomatis dari sistem HR Insights.<br>
+        Tautan ini dikirimkan secara otomatis dari sistem Proxsis Academy.<br>
         © ${new Date().getFullYear()} ${CONFIG.SENDER_NAME}. All rights reserved.
       </p>
     </div>
