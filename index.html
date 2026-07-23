@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dapatkan HR Curated Insights 2026 secara gratis. Dapatkan panduan strategis, data rekrutmen terbaru, dan tren HR masa kini untuk melejitkan performa organisasi Anda.">
+  <title>Akses Gratis: HR Curated Insights 2026</title>
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome Icons for modern visuals -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+  <!-- Background Accents (Glowing Orbs) -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <main class="container">
+    <div class="grid-layout">
+      
+      <!-- Left Column: Value Proposition & Visual Mockup -->
+      <section class="info-section">
+        <div class="badge">
+          <i class="fa-solid fa-gift"></i> Akses Publik Gratis
+        </div>
+        
+        <h1 class="main-title">
+          HR Curated <br><span class="gradient-text">Insights 2026</span>
+        </h1>
+        
+        <p class="subtitle">
+          Panduan praktis dan kurasi data strategis untuk HR Professional, Pemimpin Tim, dan Business Owner guna menyusun strategi talenta di era dinamis.
+        </p>
+
+        <!-- Mockup Visual -->
+        <div class="mockup-container">
+          <div class="mockup-wrapper">
+            <img src="assets/hr_insight_cover.jpg" alt="HR Insights 2026 Book Cover Mockup" class="book-cover">
+            <div class="mockup-shadow"></div>
+          </div>
+        </div>
+
+        <!-- What's Inside List -->
+        <div class="features-list">
+          <h3 class="features-title">Apa saja yang akan Anda pelajari?</h3>
+          <ul>
+            <li>
+              <div class="icon-wrapper"><i class="fa-solid fa-chart-line"></i></div>
+              <span><strong>Tren Rekrutmen & Talent Acquisition</strong> terkini untuk menarik kandidat terbaik.</span>
+            </li>
+            <li>
+              <div class="icon-wrapper"><i class="fa-solid fa-users-gear"></i></div>
+              <span><strong>Strategi Retensi Talenta</strong> guna meminimalisir angka turnover karyawan.</span>
+            </li>
+            <li>
+              <div class="icon-wrapper"><i class="fa-solid fa-coins"></i></div>
+              <span><strong>Benchmark Remunerasi & Benefit</strong> berbasis riset pasar terkini.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Right Column: Lead Form Card -->
+      <section class="form-section">
+        <div class="form-card" id="formCard">
+          
+          <div class="form-header">
+            <h2 class="form-title">Dapatkan Akses Instan</h2>
+            <p class="form-subtitle">Silakan isi formulir di bawah. Link unduhan eBook akan otomatis dikirim ke alamat email Anda.</p>
+          </div>
+
+          <form id="leadForm" novalidate>
+            <!-- Nama Lengkap -->
+            <div class="form-group">
+              <label for="nama"><i class="fa-regular fa-user"></i> Nama Lengkap</label>
+              <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+              <span class="error-msg" id="namaError">Nama lengkap wajib diisi</span>
+            </div>
+
+            <!-- Nomor WhatsApp -->
+            <div class="form-group">
+              <label for="whatsapp"><i class="fa-brands fa-whatsapp"></i> Nomor WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="Contoh: 081234567890" required>
+              <span class="error-msg" id="whatsappError">Masukkan nomor WhatsApp yang valid (minimal 10 digit)</span>
+            </div>
+
+            <!-- Alamat Email -->
+            <div class="form-group">
+              <label for="email"><i class="fa-regular fa-envelope"></i> Alamat Email</label>
+              <input type="email" id="email" name="email" placeholder="nama@perusahaan.com" required>
+              <span class="error-msg" id="emailError">Masukkan alamat email kerja yang valid</span>
+            </div>
+
+            <!-- Nama Perusahaan -->
+            <div class="form-group">
+              <label for="perusahaan"><i class="fa-regular fa-building"></i> Nama Perusahaan</label>
+              <input type="text" id="perusahaan" name="perusahaan" placeholder="Tempat Anda bekerja saat ini" required>
+              <span class="error-msg" id="perusahaanError">Nama perusahaan wajib diisi</span>
+            </div>
+
+            <!-- Jabatan / Posisi -->
+            <div class="form-group">
+              <label for="jabatan"><i class="fa-solid fa-briefcase"></i> Jabatan / Posisi</label>
+              <input type="text" id="jabatan" name="jabatan" placeholder="Contoh: HR Manager / Head of People" required>
+              <span class="error-msg" id="jabatanError">Jabatan/posisi wajib diisi</span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="btn-text">Kirim ke Email Saya <i class="fa-solid fa-paper-plane"></i></span>
+              <span class="btn-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i> Memproses...</span>
+            </button>
+          </form>
+
+          <div class="form-footer">
+            <i class="fa-solid fa-shield-halved"></i> Data Anda dijamin aman & hanya digunakan untuk mengirimkan materi HR.
+          </div>
+
+        </div>
+
+        <!-- Success State (Hidden by default) -->
+        <div class="success-card hidden" id="successCard">
+          <div class="success-icon-wrapper">
+            <div class="success-circle">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="success-pulse"></div>
+          </div>
+          
+          <h2 class="success-title">Terima Kasih, <span id="successUser">Kawan</span>!</h2>
+          <p class="success-message">
+            Data Anda telah terkirim dan direkap di database kami. Tautan unduh produk <strong>HR Curated Insights 2026</strong> telah dikirim secara otomatis ke email Anda:
+          </p>
+          <div class="success-email-badge" id="successEmail">email@domain.com</div>
+          <p class="success-submessage">
+            Silakan periksa folder Kotak Masuk (Inbox) atau folder Spam/Promosi Anda beberapa saat lagi.
+          </p>
+          
+          <div class="success-actions">
+            <button class="reset-btn" id="resetBtn">
+              <i class="fa-solid fa-arrow-left"></i> Kembali ke Formulir
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 HR Curated Insights. Didesain secara eksklusif dengan performa tinggi.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
